@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -173,29 +174,6 @@
   padding-top: 48px;
 }
 
-.content__item__title {
-  font-size: 13px;
-  line-height: 16px;
-  text-transform: capitalize;
-  color: black;
-  margin-top: 25px;
-}
-
-.content__item__text {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 17px;
-  margin-top: 13px;
-  color: #5D5D5D;
-}
-
-.content__item__cost {
-  font-size: 16px;
-  line-height: 19px;
-  color: #F16D7F;
-  margin-top: 18px;
-}
-
 .content__item {
   height: 581px;
   width: 360px;
@@ -206,15 +184,68 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #F8F8F8;
+  background-color: #F8F8F8;
+}
+
+.content__item__title {
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: capitalize;
+  color: black;
+}
+
+.content__item__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 13px;
+  color: #5D5D5D;
+  opacity: 0.6;
+}
+
+.content__item__cost {
+  font-size: 16px;
+  line-height: 19px;
+  color: #F16D7F;
+  margin-top: 18px;
+}
+
+.content__item__paragraph {
+  margin: 25px 29px 20px 16px;
+}
+
+.content__button_center {
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .content__button {
   padding: 15px 39px;
-  border: #F16D7F 3px solid;
+  border: #F16D7F 2px solid;
   text-transform: capitalize;
   color: #F16D7F;
   margin: 18px auto 0;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.content__paging {
+  border: 1px solid #EBEBEB;
+  min-width: 284px;
+  padding: 13px 0;
+  margin: 13px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content__paging__nums {
+  color: #C4C4C4;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .feature {
@@ -397,5 +428,147 @@
   font-size: 16px;
   line-height: 19px;
   color: #FBFBFB;
+}
+
+.sub__header {
+  background-color: #F8F3F4;
+}
+
+.sub__header__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sub__header__title {
+  text-transform: uppercase;
+  color: #F16D7F;
+  padding: 60px 0;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.sub__header__navigation {
+  padding: 65px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sub__header__navigation__links:not(:last-child) {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #636363;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 300;
+}
+
+.sub__header__navigation__links {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #F16D7F;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+}
+
+/*почему-то не работает с классами - 
+пришлось задать стиль напрямую через теги */
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::after {
+  content: url(../img/logo/sort.svg);
+  margin-left: 11px;
+}
+
+.filter {
+  margin-top: 51px;
+  margin-left: 24px;
+}
+
+.filter__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.filter__sorting {
+  margin: 0 auto;
+  min-width: 296px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter__sorting__item {
+  text-transform: uppercase;
+  color: #6F6E6E;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.filter__sorting__item::after {
+  content: url(../img/logo/arrow.svg);
+  margin-left: 10px;
+}
+
+.reg_form {
+  margin-top: 64px;
+}
+
+.reg_form__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reg_form__wrapper {
+  border: none;
+}
+
+.reg_form__title {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  opacity: 0.6;
+}
+
+.reg_form__field {
+  padding: 13px 278px 16px 17px;
+  margin: 20px 0;
+  border: 1px solid #A4A4A4;
+}
+
+.reg_form__gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  align-content: center;
+}
+
+.reg_form__gender__name {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  vertical-align: text-top;
 }
 /*# sourceMappingURL=style.css.map */
