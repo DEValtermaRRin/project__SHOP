@@ -1,0 +1,29 @@
+@import '_vars.scss';
+.filter {
+    margin-top: 51px;
+    margin-left: 24px;
+    &__flex {
+        display: flex;
+        justify-content: start;
+    }
+    & details {}
+    &__sorting {
+        margin: 0 auto;
+        min-width: 296px;
+        display: flex;
+        justify-content: space-between;
+        &__item {
+            text-transform: uppercase;
+            color: #6F6E6E;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        /*   &__item::after {
+            content: url(../img/logo/arrow.svg);
+            margin-left: 10px;
+        } */
+    }
+}
+
+
+/*  ! TODO!! Гармошка */

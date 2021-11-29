@@ -1,0 +1,30 @@
+$main_color: #222222;
+$main_decor_color: #F16D7F;
+$feature_color: #FBFBFB;
+@mixin flexColumn() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexBetween() {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flexBetweenWrap() {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin typeText($size, $height, $weight, $color) {
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin flexColumnCenter() {
+    @include flexColumn();
+    align-items: center;
+}
