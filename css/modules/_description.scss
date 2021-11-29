@@ -1,0 +1,66 @@
+    @import '_vars.scss';
+    .description {
+        &__flex {
+            margin-top: -48px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__line {
+            display: block;
+            fill: $main_decor_color;
+            margin: 12px auto;
+        }
+        & h3 {
+            margin-top: 65px;
+            text-transform: uppercase;
+            @include typeText(14px, 17px, 300, $main_decor_color);
+        }
+        & h2 {
+            @include typeText(18px, 22px, 300, #4D4D4D);
+            text-transform: uppercase;
+        }
+        & p {
+            margin: 48px 0 32px;
+            max-width: 555px;
+            @include typeText(14px, 17px, 300, #5E5E5E);
+            text-align: center;
+        }
+        & strong {
+            @include typeText(24px, 29px, 300, $main_decor_color);
+        }
+        &__line_2 {
+            border: 1px solid #EAEAEA;
+            margin: 65px auto;
+        }
+        &__filter {
+            min-height: 100px;
+            min-width: 395px;
+            display: flex;
+            justify-content: space-around;
+            &__item {
+                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 17px;
+                color: #6F6E6E;
+            }
+            &__item::after {
+                content: url(../img/logo/arrow.svg);
+                margin-left: 9px;
+            }
+        }
+        & button {
+            margin-bottom: 64px;
+            padding: 12px 54px 11px 0;
+            border: $main_decor_color 1px solid;
+            @include typeText(16px, 19px, 400, $main_decor_color);
+            background-color: #fff;
+            & svg {
+                margin: 0 24px;
+                vertical-align: middle;
+                fill: $main_decor_color;
+                stroke: inherit;
+            }
+        }
+    }

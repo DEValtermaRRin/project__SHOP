@@ -1,0 +1,32 @@
+@import '_vars.scss';
+.promo {
+    background-color: #F1E4E6;
+    height: 764px;
+    &__flex {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        background: url(../img/bg-s/man.png) no-repeat -228px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        max-width: 405px;
+        color: $main_color;
+        border-left: $main_decor_color solid 12px;
+        text-transform: uppercase;
+        padding-left: 16px;
+    }
+    &__decor {
+        color: $main_decor_color;
+    }
+    &__bold {
+        font-family: Lato;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 58px;
+    }
+}

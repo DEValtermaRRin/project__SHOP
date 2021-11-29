@@ -1,0 +1,14 @@
+@import '_vars.scss';
+.slide {
+    padding-bottom: 48px;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    &__img {
+        margin: 0 auto;
+    }
+    &__arrow {
+        padding: 8px;
+        background: rgba(42, 42, 42, 0.15);
+    }
+}

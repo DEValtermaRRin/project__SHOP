@@ -1,0 +1,8 @@
+@import '_vars.scss';
+.products {
+    margin: 128px 0;
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+    }
+}

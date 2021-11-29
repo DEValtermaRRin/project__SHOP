@@ -1,0 +1,25 @@
+@import '_vars.scss';
+.header {
+    background-color: $main_color;
+    color: white;
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        margin: 18px 0;
+    }
+    &__left_item {
+        &:not(:first-child) {
+            margin-left: 41px;
+        }
+    }
+    &__right {
+        margin: 18px 0;
+    }
+    &__right_item {
+        &:not(:last-child) {
+            margin-right: 33px;
+        }
+    }
+}
