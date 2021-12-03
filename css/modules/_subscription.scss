@@ -1,67 +1,59 @@
 @import '_vars.scss';
 .subscription {
-    height: 448px;
-    background-color: #E1E1E1;
-    background: url(../img/bg-s/serfer.svg) 100% 100% no-repeat;
+    background: url('../../img/bg-s/serfer.jpg') 100% 100% no-repeat;
     background-size: cover;
     &__flex {
-        display: flex;
-        justify-content: space-between;
+        @include flexBetween();
     }
-    &__text_italic {
-        font-style: italic;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 24px;
+    & article {
+        max-width: 50%;
     }
-    &__quote {
-        font-size: 20px;
-        line-height: 24px;
-        color: #222224;
-        text-align: center;
-        margin-top: 30px;
-    }
-    &__subscribe {
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 40px;
-        color: #222224;
-        text-align: center;
-    }
-    &__text {
-        text-transform: uppercase;
-        font-size: 18px;
-        line-height: 30px;
-        color: #222224;
-    }
-    &__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &_left {
-            width: 360px;
-            padding: 95px 0 126px;
+    & .left {
+        padding: 97px 0 126px;
+        & img {
+            display: block;
+            margin: 0 auto;
         }
-        &_right {
-            width: 557px;
-            padding: 148px 0 156px;
+        & p {
+            margin-top: 30px;
+            max-width: 360px;
+            @include typeText(20px,
+            24px,
+            400,
+            #222224);
+            text-align: center;
         }
     }
-    &__photo {
-        width: 96px;
-    }
-    &__form {
-        margin-top: 32px;
-        display: flex;
-        flex-direction: row;
-        &_email,
-        &_button {
+    & .right {
+        padding: 150px 0 156px;
+        & h4 {
+            @include typeText(24px,
+            40px,
+            700,
+            #222224,
+            uppercase);
+            text-align: center;
+        }
+        &>p {
+            @include typeText(18px,
+            30px,
+            400,
+            #222224,
+            uppercase);
+            text-align: center;
+        }
+        & form {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: row;
+        }
+        & input,
+        button {
             border-radius: 20px;
             border: none;
             padding: 15px;
         }
-        &_email {
+        & input {
             background-color: #E1E1E1;
             flex-grow: 2;
             border-right-width: 0;
@@ -69,7 +61,7 @@
             border-bottom-right-radius: 0;
             width: 256px;
         }
-        &_button {
+        & button {
             color: white;
             background-color: $main_decor_color;
             border-left-width: 0;
@@ -77,6 +69,9 @@
             border-bottom-left-radius: 0;
             border: none;
             width: 100px;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }

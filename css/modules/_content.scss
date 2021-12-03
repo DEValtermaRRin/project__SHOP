@@ -1,17 +1,11 @@
 @import '_vars.scss';
 .content {
     & h3 {
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 36px;
-        color: $main_color;
+        @include typeText(30px, 36px, 400, $main_color);
         text-align: center;
     }
     & h4 {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        color: #9F9F9F;
+        @include typeText(14px, 17px, 400, #9F9F9F);
         text-align: center;
     }
     &__flex {
@@ -21,48 +15,37 @@
         padding-top: 48px;
     }
     &__item {
-        // position: relative;
+        position: relative;
         background-color: #F8F8F8;
         height: 581px;
         width: 360px;
         display: flex;
         flex-direction: column;
+        transition: all 1s;
         & h4 {
-            font-size: 13px;
-            line-height: 16px;
-            text-transform: capitalize;
-            color: black;
+            @include typeText(13px, 16px, 400, #000, capitalize);
             text-align: left;
         }
         & p {
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 17px;
+            @include typeText(14px, 17px, 300, #5D5D5D);
             margin-top: 13px;
-            color: #5D5D5D;
             opacity: 0.6;
         }
         & strong {
             display: inline-block;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-            color: $main_decor_color;
+            @include typeText(16px, 19px, 400, $main_decor_color);
             margin-top: 18px;
         }
         &__paragraph {
             margin: 25px 29px 20px 16px;
         }
-        //TO DO!!!
-        // &__img {
-        //     background-color: #000;
-        //     opacity: 1;
-        // }
-        // &__img:hover .content__item__hover {
-        //     opacity: 0.7;
-        //     border: 1px solid #000000;
-        //     box-sizing: border-box;
-        // }
+        &:hover::before {
+            position: absolute;
+            content: url(../../img/logo/add_to_cart.png);
+            padding: 188px 110px;
+            background: rgba(58, 56, 56, 0.86);
+            cursor: pointer;
+        }
     }
     &__button_center {
         display: inline-block;
@@ -70,7 +53,7 @@
     }
     &__button {
         padding: 15px 39px;
-        border: $main_decor_color 2px solid;
+        border: $main_decor_color 1px solid;
         text-transform: capitalize;
         color: $main_decor_color;
         margin: 0 auto;
@@ -79,6 +62,7 @@
         &:hover {
             background-color: $main_decor_color;
             color: #fff;
+            cursor: pointer;
         }
     }
     &__paging {
@@ -88,11 +72,8 @@
         margin: 13px auto 0;
         display: flex;
         justify-content: space-around;
-        &__nums {
-            color: #C4C4C4;
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 19px;
+        & p {
+            @include typeText(16px, 19px, 300, #C4C4C4);
         }
     }
 }

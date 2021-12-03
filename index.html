@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,900&display=swap" rel="stylesheet"> -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,900&display=swap');
     </style>
@@ -86,7 +89,7 @@
                     </article>
                 </nav>
                 <nav class="content__item">
-                    <img class="content__item__img" src="img/index_img/prdct_3.jpg" alt="product_3">
+                    <img src="img/index_img/prdct_3.jpg" alt="product_3">
                     <article class="content__item__paragraph">
                         <h4>ELLERY X M'O CAPSULE</h4>
                         <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
@@ -125,45 +128,45 @@
         <section class="feature">
             <div class="feature__flex container">
                 <article class="feature__item"><img src="img/logo/delivery.svg" alt="delivery">
-                    <h4 class="feature__title">Free Delivery</h4>
-                    <p class="feature__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                    <h4>Free Delivery</h4>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
                 </article>
                 <article class="feature__item"><img src="img/logo/sales.svg" alt="sales">
-                    <h4 class="feature__title">Sales & discounts</h4>
-                    <p class="feature__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                    <h4>Sales & discounts</h4>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
                 </article>
                 <article class="feature__item"><img src="img/logo/assurance.svg" alt="assurance">
-                    <h4 class="feature__title">Quality assurance</h4>
-                    <p class="feature__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                    <h4>Quality assurance</h4>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
                 </article>
             </div>
         </section>
         <section class="subscription">
             <div class="subscription__flex container">
-                <article class="subscription__item subscription__item_left">
-                    <img class="subscription__photo" src="img/index_img/photo.png" alt="photo">
-                    <p class="subscription__quote">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a <span class="subscription__text_italic">pulvinar purus condimentum</span> “</p>
+                <article class="left">
+                    <img src="img/index_img/photo.png" alt="photo">
+                    <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a <em>pulvinar purus condimentum “</em></p>
                 </article>
-                <article class="subscription__item subscription__item_right">
-                    <h4 class="subscription__subscribe ">subscribe</h4>
-                    <p class="subscription__text">for our newletter and promotion</p>
-                    <form class="subscription__form" action="#" method="post">
+                <article class="right">
+                    <h4>subscribe</h4>
+                    <p>for our newletter and promotion</p>
+                    <form action="#" method="post">
                         <!--Правильно ли здесь использовать метод POST?-->
-                        <input class="subscription__form_email" type="email" placeholder="Enter Your Email">
-                        <button class="subscription__form_button" type="submit">Subscribe</button>
+                        <input type="email" placeholder="Enter Your Email">
+                        <button type="submit">Subscribe</button>
                     </form>
                 </article>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer__flex container">
-            <article class="footer__copywrite">&copy; 2021 Brand All Rights Reserved.</article>
-            <article class="footer__socials">
-                <i class="footer__icon fab fa-facebook-f"></i>
-                <i class="footer__icon fab fa-instagram"></i>
-                <i class="footer__icon fab fa-pinterest-p"></i>
-                <i class="footer__icon fab fa-twitter"></i>
+    <footer>
+        <div class="flex container">
+            <p>&copy; 2021 <span>brand</span> All <span>Rights</span> Reserved.</p>
+            <article>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-twitter"></i>
             </article>
         </div>
     </footer>

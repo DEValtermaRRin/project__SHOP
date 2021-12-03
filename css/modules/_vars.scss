@@ -1,6 +1,11 @@
 $main_color: #222222;
 $main_decor_color: #F16D7F;
 $feature_color: #FBFBFB;
+@mixin flexSpaceAround() {
+    display: flex;
+    justify-content: space-around;
+}
+
 @mixin flexColumn() {
     display: flex;
     flex-direction: column;
@@ -17,11 +22,12 @@ $feature_color: #FBFBFB;
     flex-wrap: wrap;
 }
 
-@mixin typeText($size, $height, $weight, $color) {
+@mixin typeText($size, $height, $weight, $color, $txt_transform:none) {
     font-size: $size;
     line-height: $height;
     font-weight: $weight;
     color: $color;
+    text-transform: $txt_transform;
 }
 
 @mixin flexColumnCenter() {

@@ -14,13 +14,10 @@
 @import 'modules/slider';
 @import 'modules/products';
 @import 'modules/product_cart';
+@import 'modules/drop-down';
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Lato, sans-serif;
+    font-family: 'Lato', sans-serif;
 }
-
-
-/*почему-то не работает с классами - 
-пришлось задать стиль напрямую через теги */

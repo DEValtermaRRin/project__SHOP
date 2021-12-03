@@ -1,5 +1,6 @@
 @import '_vars.scss';
 .slide {
+    border: 1px solid #eaeaea;
     padding-bottom: 48px;
     background-color: #f7f7f7;
     display: flex;
@@ -10,5 +11,9 @@
     &__arrow {
         padding: 8px;
         background: rgba(42, 42, 42, 0.15);
+        fill: #000;
+        &:hover {
+            fill: $main_decor_color;
+        }
     }
 }

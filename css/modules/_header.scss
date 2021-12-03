@@ -3,8 +3,7 @@
     background-color: $main_color;
     color: white;
     &__flex {
-        display: flex;
-        justify-content: space-between;
+        @include flexBetween();
     }
     &__left {
         margin: 18px 0;

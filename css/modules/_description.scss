@@ -1,4 +1,13 @@
     @import '_vars.scss';
+    @keyframes blink {
+        0% {
+            transform: translateX(-2em) skewX(-30deg);
+        }
+        100% {
+            transform: translateX(15em) skewX(-30deg);
+        }
+    }
+    
     .description {
         &__flex {
             margin-top: -48px;
@@ -6,6 +15,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            border: 1px solid #EAEAEA;
         }
         &__line {
             display: block;
@@ -14,12 +24,10 @@
         }
         & h3 {
             margin-top: 65px;
-            text-transform: uppercase;
-            @include typeText(14px, 17px, 300, $main_decor_color);
+            @include typeText(14px, 17px, 300, $main_decor_color, uppercase);
         }
         & h2 {
-            @include typeText(18px, 22px, 300, #4D4D4D);
-            text-transform: uppercase;
+            @include typeText(18px, 22px, 300, #4D4D4D, uppercase);
         }
         & p {
             margin: 48px 0 32px;
@@ -32,6 +40,8 @@
         }
         &__line_2 {
             border: 1px solid #EAEAEA;
+            height: 1px;
+            width: 642px;
             margin: 65px auto;
         }
         &__filter {
@@ -51,9 +61,10 @@
             }
         }
         & button {
+            position: relative;
             margin-bottom: 64px;
             padding: 12px 54px 11px 0;
-            border: $main_decor_color 1px solid;
+            border: $main_decor_color 2px solid;
             @include typeText(16px, 19px, 400, $main_decor_color);
             background-color: #fff;
             & svg {
@@ -61,6 +72,21 @@
                 vertical-align: middle;
                 fill: $main_decor_color;
                 stroke: inherit;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: -2em;
+                left: 0;
+                width: 30px;
+                height: 100px;
+                background-color: rgba(255, 255, 255, 0.5);
+                border: #fff;
+                transform: translateX(-2em);
+            }
+            &:hover::before {
+                cursor: pointer;
+                animation: blink infinite 2s;
             }
         }
     }
