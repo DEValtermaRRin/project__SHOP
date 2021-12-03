@@ -1,0 +1,66 @@
+@import '_vars.scss';
+.drop-down {
+    details {
+        position: relative;
+        svg {
+            margin-left: 10px;
+            fill: black;
+        }
+        &>summary {
+            list-style-type: none;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &:first-child[open] {
+            position: absolute;
+            left: 274px;
+            top: 262px;
+            z-index: 1;
+            background-color: #fff;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            width: 360px;
+            &>summary {
+                padding-top: 13px;
+                padding-left: 16px;
+                color: $main_decor_color;
+            }
+            svg {
+                fill: $main_decor_color;
+            }
+        }
+        summary {
+            @include typeText(14px, 17px, 600, #000, uppercase);
+            padding-left: 16px;
+        }
+        &>details {
+            margin: 18px;
+            summary {
+                display: block;
+                border-left: 5px solid $main_decor_color;
+                border-bottom: 1px solid #ebebeb;
+                @include typeText(14px, 17px, 400, #6F6E6E, uppercase);
+                padding: 11px 254px 11px 33px;
+            }
+            &[open] {
+                summary {
+                    color: $main_decor_color;
+                }
+                li {
+                    list-style-type: none;
+                    padding: 11px 184px 0 34px;
+                    &:first-child {
+                        padding-top: 24px;
+                    }
+                    &:last-child {
+                        padding-bottom: 24px;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    @include typeText(14px, 17px, 400, #6F6E6E, capitalize);
+                }
+            }
+        }
+    }
+}

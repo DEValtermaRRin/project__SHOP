@@ -2,99 +2,70 @@
 .reg_form {
     margin: 30px 0 96px;
     &__flex {
-        display: flex;
-        justify-content: space-between;
+        @include flexBetween();
         margin-top: 33px;
     }
     &__wrapper {
         border: none;
         margin-top: 30px;
-        max-width: 360px;
     }
-    &__left {
-        flex-grow: 1;
-        // max-width: 360px;
+    &__genderSelection {
+        & .gender {
+            vertical-align: middle;
+            @include typeText(11px, 13px, 300, #000);
+            &:last-child {
+                margin-left: 10px;
+            }
+            &>input {
+                margin-right: 10px;
+            }
+        }
     }
-    &__title {
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 19px;
-        color: #222222;
+    & legend {
+        @include typeText(16px, 19px, 300, #222);
         margin-top: 33px;
     }
-    &__field {
+    & fieldset>input {
         padding-left: 17px;
         min-width: 360px;
         min-height: 45px;
         margin: 20px 0;
         border: 1px solid #A4A4A4;
-    }
-    &__field::placeholder {
-        text-transform: capitalize;
-        font-weight: 300;
-        font-size: 13px;
-        line-height: 16px;
-        color: #B1B1B1;
-    }
-    &__gender {
-        display: flex;
-        align-content: center;
-        &__name {
-            font-weight: 300;
-            font-size: 11px;
-            line-height: 13px;
-            color: #000;
-        }
-        &__name:last-child {
-            margin-left: 10px;
+        &::placeholder {
+            @include typeText(13px, 16px, 300, #b1b1b1, capitalize);
         }
     }
     &__notice {
+        @include typeText(13px, 16px, 300, #b1b1b1);
         margin-top: 15px;
-        font-weight: 300;
-        font-size: 13px;
-        line-height: 16px;
-        color: #B1B1B1;
+        max-width: 360px;
     }
     &__button {
+        @include typeText(14px, 17px, 400, #fff, uppercase);
         margin-top: 39px;
         background-color: $main_decor_color;
-        color: white;
         padding: 16px 29px;
-        text-transform: uppercase;
         border: none;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
     }
     &__right {
+        flex-grow: 2;
         margin-top: 30px;
         max-width: 650px;
-        &__title {
-            font-weight: 300;
-            font-size: 24px;
-            line-height: 29px;
-            color: #000000;
+        & h2 {
+            @include typeText(24px, 29px, 300, #000);
         }
-        &__text {
+        & p {
             margin: 22px 0;
-            font-weight: 300;
-            font-size: 24px;
-            line-height: 29px;
-            color: #000000;
+            @include typeText(24px, 29px, 300, #000);
         }
-        &__item {
+        & ul>li {
+            @include typeText(24px, 29px, 300, #000);
             list-style: none;
             margin-top: 16px;
-            font-weight: 300;
-            font-size: 24px;
-            line-height: 29px;
-            line-height: 100%;
-            color: #000000;
-        }
-        &__item::before {
-            content: url(../img/logo/check.svg);
-            margin-right: 22px;
+            &::before {
+                content: url(../img/logo/check.svg);
+                margin-right: 22px;
+            }
         }
     }
 }

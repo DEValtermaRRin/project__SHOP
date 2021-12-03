@@ -3,8 +3,7 @@
     background-color: $main_color;
     margin-top: 95px;
     &__flex {
-        display: flex;
-        justify-content: space-between;
+        @include flexBetween();
     }
     & h4 {
         @include typeText(20px, 24px, 300, $feature_color);

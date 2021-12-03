@@ -56,20 +56,20 @@
                 <article class="reg_form__left ">
                     <form action="#" method="post">
                         <fieldset class="reg_form__wrapper">
-                            <legend class="reg_form__title">Your Name</legend>
-                            <input class="reg_form__field" type="text" placeholder="First name" id="first_name">
-                            <input class="reg_form__field" type="text" placeholder="Last name" id="last_name">
-                            <div class="reg_form__gender">
-                                <label class="reg_form__gender__name" for="male">
-                                    <input style="margin-right: 10px;" id="male" type="radio" name="gender" value="male">Male</label>
-                                <label class="reg_form__gender__name" for="female">
-                                    <input style="margin-right: 10px;" id="female" type="radio" name="gender" value="female">Female</label>
+                            <legend>Your Name</legend>
+                            <input type="text" placeholder="First name" id="first_name">
+                            <input type="text" placeholder="Last name" id="last_name">
+                            <div class="reg_form__genderSelection">
+                                <label class="gender" for="male">
+                                    <input id="male" type="radio" name="gender" value="male">Male</label>
+                                <label class="gender" for="female">
+                                    <input id="female" type="radio" name="gender" value="female">Female</label>
                             </div>
                         </fieldset>
                         <fieldset class="reg_form__wrapper">
-                            <legend class="reg_form__title">Login details</legend>
-                            <input class="reg_form__field" type="email" placeholder="Email" id="email">
-                            <input class="reg_form__field" type="password" placeholder="Password" id="password">
+                            <legend>Login details</legend>
+                            <input type="email" placeholder="Email" id="email">
+                            <input type="password" placeholder="Password" id="password">
                             <p class="reg_form__notice">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
 
                         </fieldset>
@@ -80,12 +80,12 @@
                 <article class="reg_form__right">
                     <h2 class="reg_form__right__title">LOYALTY HAS ITS PERKS</h2>
                     <p class="reg_form__right__text">Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</p>
-                    <ul class="reg_form__right__items">
-                        <li class="reg_form__right__item">15% off welcome offer</li>
-                        <li class="reg_form__right__item">Free shipping, returns and exchanges on all orders</li>
-                        <li class="reg_form__right__item">$10 off a purchase on your birthday</li>
-                        <li class="reg_form__right__item">Early access to products</li>
-                        <li class="reg_form__right__item">Exclusive offers & rewards</li>
+                    <ul>
+                        <li>15% off welcome offer</li>
+                        <li>Free shipping, returns and exchanges on all orders</li>
+                        <li>$10 off a purchase on your birthday</li>
+                        <li>Early access to products</li>
+                        <li>Exclusive offers & rewards</li>
                     </ul>
 
                 </article>
@@ -94,30 +94,30 @@
 
         <section class="subscription">
             <div class="subscription__flex container">
-                <article class="subscription__item subscription__item_left">
-                    <img class="subscription__photo" src="img/index_img/photo.png" alt="photo">
-                    <p class="subscription__quote">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a <span class="subscription__text_italic">pulvinar purus condimentum</span> “</p>
+                <article class="left">
+                    <img src="img/index_img/photo.png" alt="photo">
+                    <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a <em>pulvinar purus condimentum “</em></p>
                 </article>
-                <article class="subscription__item subscription__item_right">
-                    <h4 class="subscription__subscribe ">subscribe</h4>
-                    <p class="subscription__text">for our newletter and promotion</p>
-                    <form class="subscription__form" action="#" method="post">
+                <article class="right">
+                    <h4>subscribe</h4>
+                    <p>for our newletter and promotion</p>
+                    <form action="#" method="post">
                         <!--Правильно ли здесь использовать метод POST?-->
-                        <input class="subscription__form_email" type="email" placeholder="Enter Your Email">
-                        <button class="subscription__form_button" type="submit">Subscribe</button>
+                        <input type="email" placeholder="Enter Your Email">
+                        <button type="submit">Subscribe</button>
                     </form>
                 </article>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer__flex container">
-            <article class="footer__copywrite">&copy; 2021 Brand All Rights Reserved.</article>
-            <article class="footer__socials">
-                <i class="footer__icon fab fa-facebook-f"></i>
-                <i class="footer__icon fab fa-instagram"></i>
-                <i class="footer__icon fab fa-pinterest-p"></i>
-                <i class="footer__icon fab fa-twitter"></i>
+    <footer>
+        <div class="flex container">
+            <p>&copy; 2021 <span>brand</span> All <span>Rights</span> Reserved.</p>
+            <article>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-twitter"></i>
             </article>
         </div>
     </footer>
