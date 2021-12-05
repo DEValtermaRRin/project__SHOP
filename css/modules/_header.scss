@@ -1,24 +1,57 @@
 @import '_vars.scss';
 .header {
+    height: 75px;
     background-color: $main_color;
-    color: white;
     &__flex {
         @include flexBetween();
+        align-items: center;
+        height: 100%;
     }
     &__left {
-        margin: 18px 0;
-    }
-    &__left_item {
-        &:not(:first-child) {
-            margin-left: 41px;
-        }
+        @include flexBetween();
+        align-items: flex-end;
     }
     &__right {
-        margin: 18px 0;
+        @include flexBetween();
+        align-items: center;
     }
-    &__right_item {
-        &:not(:last-child) {
-            margin-right: 33px;
+    &__left>a {
+        margin-left: 44px;
+        &:first-child {
+            margin-left: 0;
         }
+    }
+    .right-item {
+        margin-right: 33px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    button {
+        cursor: pointer;
+        display: block;
+        width: 32px;
+        height: 23px;
+        background-color: $main_color;
+        border: none;
+        &>.btn {
+            display: block;
+            height: 2px;
+            width: 28px;
+            background-color: #fff;
+            margin: 8px auto;
+        }
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 2px;
+            background-color: #fff;
+            margin: 0 auto;
+        }
+    }
+    svg {
+        fill: #E8E8E8;
     }
 }

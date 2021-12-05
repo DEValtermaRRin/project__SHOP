@@ -1,7 +1,7 @@
 @import '_vars.scss';
 .promo {
     background-color: #F1E4E6;
-    height: 764px;
+    height: calc(100vh - 75px);
     &__flex {
         height: 100%;
         display: flex;
@@ -11,22 +11,18 @@
         background: url(../img/bg-s/man.png) no-repeat -228px;
     }
     &__title {
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 39px;
+        @include typeText(32px, 39px, 700, $main_color, uppercase);
         max-width: 405px;
-        color: $main_color;
         border-left: $main_decor_color solid 12px;
-        text-transform: uppercase;
         padding-left: 16px;
     }
     &__decor {
         color: $main_decor_color;
     }
     &__bold {
-        font-family: Lato;
-        font-weight: 900;
-        font-size: 48px;
-        line-height: 58px;
+        @include typeText(48px, 58px, 900, $main_color, uppercase);
+    }
+    & .center {
+        padding: 0 calc(50% - 500px);
     }
 }
