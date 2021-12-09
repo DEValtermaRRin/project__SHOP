@@ -1,28 +1,52 @@
 @import '_vars.scss';
+
 .promo {
+
     background-color: #F1E4E6;
     height: calc(100vh - 75px);
+
     &__flex {
+
         height: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         flex-wrap: wrap;
-        background: url(../img/bg-s/man.png) no-repeat -228px;
+        background: url(../../img/bg-s/man-1.png) no-repeat bottom left;
+        background-size: contain;
     }
+
     &__title {
-        @include typeText(32px, 39px, 700, $main_color, uppercase);
+        @include typeText(2em, 39px, 700, $main_color, uppercase);
         max-width: 405px;
         border-left: $main_decor_color solid 12px;
         padding-left: 16px;
     }
+
     &__decor {
         color: $main_decor_color;
     }
+
     &__bold {
-        @include typeText(48px, 58px, 900, $main_color, uppercase);
+        @include typeText(1.5em, 58px, 900, $main_color, uppercase);
+        font-weight: bold;
     }
-    & .center {
-        padding: 0 calc(50% - 500px);
+
+
+}
+
+@media (max-width: 790px) {
+    .promo {
+        max-height: 368px;
     }
+}
+
+@media (max-width: 608px) {
+    .promo {
+        &__flex {
+            background: none;
+            justify-content: center;
+        }
+    }
+
 }

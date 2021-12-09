@@ -1,14 +1,71 @@
 @import '_vars.scss';
 .filter {
     margin-top: 51px;
+    position: relative;
     &__flex {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
     }
-    &__sorting {
-        margin: 0 auto;
-        min-width: 296px;
-        @include flexBetween();
+    & .item {
+        display: inline;
+        margin-right: 10px;
+        &__flex {
+            position: absolute;
+            left: -14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #fff;
+            z-index: 10;
+            min-width: 79px;
+            min-height: 103px;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            & li {
+                list-style-type: none;
+                padding: 7px 30px 6px 9px;
+                &:first-child {
+                    padding-top: 7px;
+                }
+                &:last-child {
+                    padding-bottom: 11px;
+                }
+            }
+            & label {
+                @include typeText(14px, 16px, 400, #6F6E6E, uppercase);
+                margin-left: 9px;
+            }
+            & input {
+                margin-right: 9px;
+            }
+        }
+        &__filter {
+            position: relative;
+            margin-right: 27%;
+        }
+        &__size {
+            position: relative;
+            & summary {
+                @include typeText(14px, 17px, 400, #6F6E6E, uppercase);
+                list-style-type: none;
+                &::after {
+                    content: url(../../img/logo/arrow.svg);
+                    margin-left: 10px;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        &__price {
+            left: 150px;
+        }
+    }
+    &__center {
+        max-width: 686px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         & p {
             @include typeText(14px, 17px, 400, #6F6E6E, uppercase);
             &::after {

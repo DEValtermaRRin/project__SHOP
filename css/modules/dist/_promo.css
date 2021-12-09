@@ -1,0 +1,46 @@
+.promo {
+  background-color: #F1E4E6;
+  height: calc(100vh - 75px);
+}
+.promo__flex {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  background: url(../../img/bg-s/man-1.png) no-repeat bottom left;
+  background-size: contain;
+}
+.promo__title {
+  font-size: 2em;
+  line-height: 39px;
+  font-weight: 700;
+  color: #222222;
+  text-transform: uppercase;
+  max-width: 405px;
+  border-left: #F16D7F solid 12px;
+  padding-left: 16px;
+}
+.promo__decor {
+  color: #F16D7F;
+}
+.promo__bold {
+  font-size: 1.5em;
+  line-height: 58px;
+  font-weight: 900;
+  color: #222222;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media (max-width: 790px) {
+  .promo {
+    max-height: 368px;
+  }
+}
+@media (max-width: 608px) {
+  .promo__flex {
+    background: none;
+    justify-content: center;
+  }
+}

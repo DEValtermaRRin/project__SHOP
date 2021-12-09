@@ -1,0 +1,114 @@
+.content h3 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #222222;
+  text-transform: none;
+  text-align: center;
+}
+.content h4 {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #9F9F9F;
+  text-transform: none;
+  text-align: center;
+}
+.content__flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 48px;
+}
+.content__item {
+  margin-right: 30px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: #F8F8F8;
+  height: 581px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  transition: all 2s;
+}
+.content__item:nth-child(3n) {
+  margin-right: 0;
+}
+.content__item h4 {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #000;
+  text-transform: capitalize;
+  text-align: left;
+}
+.content__item p {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 300;
+  color: #5D5D5D;
+  text-transform: none;
+  margin-top: 13px;
+  opacity: 0.6;
+}
+.content__item strong {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #F16D7F;
+  text-transform: none;
+  margin-top: 18px;
+}
+.content__item__paragraph {
+  margin: 25px 29px 20px 16px;
+}
+.content__item:hover::before {
+  position: absolute;
+  content: url(../../img/logo/add_to_cart.png);
+  padding: 188px 110px;
+  background: rgba(58, 56, 56, 0.86);
+  cursor: pointer;
+}
+.content__button {
+  display: block;
+  margin: 48px auto;
+  width: 212px;
+  padding: 15px 37px;
+  border: #F16D7F 1px solid;
+  text-transform: capitalize;
+  color: #F16D7F;
+  background-color: #fff;
+  text-decoration: none;
+}
+.content__button:hover {
+  background-color: #F16D7F;
+  color: #fff;
+  cursor: pointer;
+}
+.content__paging {
+  border: 1px solid #EBEBEB;
+  min-width: 284px;
+  padding: 13px 0;
+  margin: 13px auto 0;
+  display: flex;
+  justify-content: space-around;
+}
+.content__paging p {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  color: #C4C4C4;
+  text-transform: none;
+}
+
+@media (max-width: 1155px) {
+  .content__item, .content__item:nth-child(3n) {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .content__item, .content__item:nth-child(3n) {
+    margin-right: 0;
+  }
+}

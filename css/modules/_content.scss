@@ -1,44 +1,59 @@
 @import '_vars.scss';
+
 .content {
     & h3 {
         @include typeText(30px, 36px, 400, $main_color);
         text-align: center;
     }
+
     & h4 {
         @include typeText(14px, 17px, 400, #9F9F9F);
         text-align: center;
     }
+
     &__flex {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        justify-content: center;
         padding-top: 48px;
     }
+
     &__item {
+        margin-right: 30px;
+        margin-bottom: 20px;
         position: relative;
         background-color: #F8F8F8;
         height: 581px;
         width: 360px;
         display: flex;
         flex-direction: column;
-        transition: all 1s;
+        transition: all 2s;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
         & h4 {
             @include typeText(13px, 16px, 400, #000, capitalize);
             text-align: left;
         }
+
         & p {
             @include typeText(14px, 17px, 300, #5D5D5D);
             margin-top: 13px;
             opacity: 0.6;
         }
+
         & strong {
             display: inline-block;
             @include typeText(16px, 19px, 400, $main_decor_color);
             margin-top: 18px;
         }
+
         &__paragraph {
             margin: 25px 29px 20px 16px;
         }
+
         &:hover::before {
             position: absolute;
             content: url(../../img/logo/add_to_cart.png);
@@ -47,24 +62,25 @@
             cursor: pointer;
         }
     }
-    &__button_center {
-        display: inline-block;
-        margin: 48px auto;
-    }
+
     &__button {
-        padding: 15px 39px;
+        display: block;
+        margin: 48px auto;
+        width: 212px;
+        padding: 15px 37px;
         border: $main_decor_color 1px solid;
         text-transform: capitalize;
         color: $main_decor_color;
-        margin: 0 auto;
         background-color: #fff;
         text-decoration: none;
+
         &:hover {
             background-color: $main_decor_color;
             color: #fff;
             cursor: pointer;
         }
     }
+
     &__paging {
         border: 1px solid #EBEBEB;
         min-width: 284px;
@@ -72,8 +88,29 @@
         margin: 13px auto 0;
         display: flex;
         justify-content: space-around;
+
         & p {
             @include typeText(16px, 19px, 300, #C4C4C4);
+        }
+    }
+}
+
+@media (max-width: 1155px) {
+    .content {
+
+        &__item,
+        &__item:nth-child(3n) {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+
+        &__item,
+        &__item:nth-child(3n) {
+            margin-right: 0;
         }
     }
 }
