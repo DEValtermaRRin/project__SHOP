@@ -1,6 +1,7 @@
 $main_color: #222222;
 $main_decor_color: #F16D7F;
 $feature_color: #FBFBFB;
+
 @mixin flexSpaceAround() {
     display: flex;
     justify-content: space-around;
@@ -33,4 +34,11 @@ $feature_color: #FBFBFB;
 @mixin flexColumnCenter() {
     @include flexColumn();
     align-items: center;
+}
+
+@mixin bgImage() {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }

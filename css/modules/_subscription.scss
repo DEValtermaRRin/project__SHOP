@@ -1,58 +1,71 @@
 @import '_vars.scss';
+
 .subscription {
     background: url('../../img/bg-s/serfer.jpg') 100% 100% no-repeat;
     background-size: cover;
+
     &__flex {
-        @include flexBetween();
+        @include flexSpaceAround();
+        flex-wrap: wrap;
     }
-    & article {
-        max-width: 50%;
-    }
+
+
     & .left {
+        max-width: 360px;
         padding: 97px 0 126px;
+
         & img {
             display: block;
             margin: 0 auto;
         }
+
         & p {
             margin-top: 30px;
             max-width: 360px;
             @include typeText(20px,
-            24px,
-            400,
-            #222224);
+                24px,
+                400,
+                #222224);
             text-align: center;
         }
     }
+
     & .right {
+        max-width: 557px;
         padding: 150px 0 156px;
+
         & h4 {
             @include typeText(24px,
-            40px,
-            700,
-            #222224,
-            uppercase);
+                40px,
+                700,
+                #222224,
+                uppercase);
             text-align: center;
         }
+
         &>p {
             @include typeText(18px,
-            30px,
-            400,
-            #222224,
-            uppercase);
+                30px,
+                400,
+                #222224,
+                uppercase);
             text-align: center;
         }
+
         & form {
-            margin-top: 32px;
+
             display: flex;
             flex-direction: row;
+            margin: 32px auto 0;
         }
+
         & input,
         button {
             border-radius: 20px;
             border: none;
             padding: 15px;
         }
+
         & input {
             background-color: #E1E1E1;
             flex-grow: 2;
@@ -61,6 +74,7 @@
             border-bottom-right-radius: 0;
             width: 256px;
         }
+
         & button {
             color: white;
             background-color: $main_decor_color;
@@ -69,9 +83,31 @@
             border-bottom-left-radius: 0;
             border: none;
             width: 100px;
+
             &:hover {
                 cursor: pointer;
             }
+        }
+    }
+}
+
+@media (max-width: 787px) {
+    .subscription {
+        & .left {
+            padding: 64px 0 48px;
+        }
+
+        & .right {
+            padding: 0 0 140px 0;
+        }
+
+    }
+}
+
+@media (max-width: 475px) {
+    .subscription {
+        & article {
+            max-width: 341px;
         }
     }
 }

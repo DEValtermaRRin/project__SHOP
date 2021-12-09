@@ -1,0 +1,92 @@
+.subscription {
+  background: url("../../img/bg-s/serfer.jpg") 100% 100% no-repeat;
+  background-size: cover;
+}
+.subscription__flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.subscription .left {
+  max-width: 360px;
+  padding: 97px 0 126px;
+}
+.subscription .left img {
+  display: block;
+  margin: 0 auto;
+}
+.subscription .left p {
+  margin-top: 30px;
+  max-width: 360px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #222224;
+  text-transform: none;
+  text-align: center;
+}
+.subscription .right {
+  max-width: 557px;
+  padding: 150px 0 156px;
+}
+.subscription .right h4 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #222224;
+  text-transform: uppercase;
+  text-align: center;
+}
+.subscription .right > p {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #222224;
+  text-transform: uppercase;
+  text-align: center;
+}
+.subscription .right form {
+  display: flex;
+  flex-direction: row;
+  margin: 32px auto 0;
+}
+.subscription .right input,
+.subscription .right button {
+  border-radius: 20px;
+  border: none;
+  padding: 15px;
+}
+.subscription .right input {
+  background-color: #E1E1E1;
+  flex-grow: 2;
+  border-right-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 256px;
+}
+.subscription .right button {
+  color: white;
+  background-color: #F16D7F;
+  border-left-width: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  width: 100px;
+}
+.subscription .right button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 787px) {
+  .subscription .left {
+    padding: 64px 0 48px;
+  }
+  .subscription .right {
+    padding: 0 0 140px 0;
+  }
+}
+@media (max-width: 475px) {
+  .subscription article {
+    max-width: 341px;
+  }
+}

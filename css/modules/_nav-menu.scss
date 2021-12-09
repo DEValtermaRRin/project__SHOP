@@ -1,4 +1,4 @@
-/* .nav-menu {
+.nav-menu {
     position: absolute;
     top: 75px;
     right: 0;
@@ -7,9 +7,11 @@
 
 .nav {
     width: 232px;
-    background-color: #F1E4E6;
+    background-color: #fff;
     height: calc(100vh - 75px);
-    padding: 20px;
+    padding: 34px;
+    box-shadow: -4px 4px 23px -6px rgba(34, 60, 80, 0.2);
+    overflow: hidden;
 
     &__wrap {
         position: relative;
@@ -17,8 +19,58 @@
 
     &__close {
         position: absolute;
-        top: 16px;
-        right: 17px;
-        // добавить цвет размер
+        top: -20px;
+        right: -17px;
+        fill: #333232;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
-} */
+
+    & a {
+        display: block;
+        text-decoration: none;
+        @include typeText(14px, 17px, 400, #6f6e6e, capitalize);
+        margin: 11px 0;
+        margin-left: 24px;
+
+        &:first-child {
+            margin-top: 12px;
+        }
+
+        &:last-child {
+            margin-bottom: 20px;
+        }
+
+        &:hover {
+            color: $main_decor_color;
+        }
+    }
+
+    &__heading {
+        @include typeText(14px, 17px, 400, $main_decor_color, uppercase);
+    }
+
+    & li {
+        list-style-type: none;
+    }
+
+    & h2 {
+        @include typeText(14px, 17px, 700, #000, uppercase);
+        font-weight: bold;
+        margin-bottom: 24px;
+    }
+}
+
+#burger {
+    display: none;
+}
+
+#burger:checked~.nav-menu {
+    display: block;
+}
+
+#burger:not(checked)~.nav-menu {
+    display: none;
+}

@@ -1,24 +1,42 @@
 @import '_vars.scss';
+
 .feature {
     background-color: $main_color;
     margin-top: 95px;
+
     &__flex {
         @include flexBetween();
     }
+
     & h4 {
         @include typeText(20px, 24px, 300, $feature_color);
         margin-top: 28px;
         margin-bottom: 16px;
     }
+
     & p {
         @include typeText(14px, 17px, 300, $feature_color);
         text-align: center;
+        max-width: 360px;
     }
+
     &__item {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 104px 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .feature {
+        &__flex {
+            @include flexColumnCenter();
+        }
+
+        &__item {
+            padding: 48px 0;
+        }
     }
 }

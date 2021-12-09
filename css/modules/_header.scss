@@ -1,32 +1,42 @@
 @import '_vars.scss';
+
 .header {
     height: 75px;
     background-color: $main_color;
+
     &__flex {
+
         @include flexBetween();
         align-items: center;
         height: 100%;
     }
+
     &__left {
         @include flexBetween();
         align-items: flex-end;
     }
+
     &__right {
         @include flexBetween();
         align-items: center;
     }
+
     &__left>a {
         margin-left: 44px;
+
         &:first-child {
             margin-left: 0;
         }
     }
+
     .right-item {
         margin-right: 33px;
+
         &:last-child {
             margin-right: 0;
         }
     }
+
     button {
         cursor: pointer;
         display: block;
@@ -34,6 +44,7 @@
         height: 23px;
         background-color: $main_color;
         border: none;
+
         &>.btn {
             display: block;
             height: 2px;
@@ -41,6 +52,7 @@
             background-color: #fff;
             margin: 8px auto;
         }
+
         &::before,
         &::after {
             content: '';
@@ -51,7 +63,17 @@
             margin: 0 auto;
         }
     }
+
     svg {
         fill: #E8E8E8;
+    }
+
+    & .menu {
+        color: white;
+        @include typeText(32px, 40px, 400, #E8E8E8, uppercase);
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
