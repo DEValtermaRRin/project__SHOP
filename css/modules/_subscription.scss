@@ -1,8 +1,8 @@
 @import '_vars.scss';
 
 .subscription {
-    background: url('../img/bg-s/serfer.jpg') 100% 100% no-repeat;
     background-size: cover;
+    background: url('../img/bg-s/serfer.jpg') 100% 100% no-repeat;
 
     &__flex {
         @include flexSpaceAround();
