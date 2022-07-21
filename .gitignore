@@ -1,1 +1,4 @@
 /.env.development
+/.vscode
+/.idea
+/node_modules

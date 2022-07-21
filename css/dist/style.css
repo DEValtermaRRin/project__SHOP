@@ -626,25 +626,25 @@ footer article > i:hover {
   margin-right: 22px;
 }
 
-.sub__header {
+.header__sub {
   background-color: #F8F3F4;
 }
-.sub__header__flex {
+.header__sub__flex {
   display: flex;
   justify-content: space-between;
 }
-.sub__header h1 {
+.header__sub h1 {
   text-transform: uppercase;
   color: #F16D7F;
   padding: 60px 0;
   font-size: 24px;
   line-height: 29px;
 }
-.sub__header__navigation {
+.header__sub__navigation {
   padding: 65px 0;
   display: flex;
 }
-.sub__header__navigation a {
+.header__sub__navigation a {
   text-decoration: none;
   text-transform: uppercase;
   color: #F16D7F;
@@ -652,7 +652,7 @@ footer article > i:hover {
   line-height: 17px;
   font-weight: 700;
 }
-.sub__header__navigation a:not(:last-child) {
+.header__sub__navigation a:not(:last-child) {
   text-decoration: none;
   text-transform: uppercase;
   color: #636363;
